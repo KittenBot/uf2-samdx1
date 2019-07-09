@@ -5,7 +5,7 @@
 
 #define VENDOR_NAME "Kittenbot Teams"
 #define PRODUCT_NAME "Kittenbot Bridge"
-#define VOLUME_LABEL "Kitten-Bridge"
+#define VOLUME_LABEL "Bridge"
 #define INDEX_URL "http://kittenbot.cn/bridge"
 #define BOARD_ID "SAMD51J19A-Bridge"
 
@@ -46,16 +46,18 @@ const uint32_t config_data[] = {
     513675505, 539130489, // magic
     62, 100,  // used entries, total entries
     1, 0x21, // PIN_ACCELEROMETER_INT = PB01
-    2, 0x23, // PIN_ACCELEROMETER_SCL = PB03
-    3, 0x22, // PIN_ACCELEROMETER_SDA = PB02
+    //2, 0x23, // PIN_ACCELEROMETER_SCL = PB03
+    //3, 0x22, // PIN_ACCELEROMETER_SDA = PB02
     13, 0x10, // PIN_LED = PA16
+    14, 0x20, // PIN_LIGHT = PB00
     18, 0xe, // PIN_MISO = PA14
     19, 0xc, // PIN_MOSI = PA12
-    20, 0xf, // PIN_NEOPIXEL = PB22
+    20, 0x36, // PIN_NEOPIXEL = PB22
     21, 0x17, // PIN_RX = PA23
     23, 0xd, // PIN_SCK = PA13
     24, 0x23, // PIN_SCL = PB03
     25, 0x22, // PIN_SDA = PB02
+    27, 0x25, // PIN_TEMPERATURE = PB05
     28, 0x16, // PIN_TX = PA22
     69, 0x3ed, // PIN_BTN_SOFT_RESET = P_1005
     70, 0x68, // ACCELEROMETER_TYPE = MPU6050
@@ -85,8 +87,7 @@ const uint32_t config_data[] = {
     208, 0x239a003d, // BOOTLOADER_BOARD_ID = 0x239a003d
     209, 0x55114460, // UF2_FAMILY = ATSAMD51
     210, 0x20, // PINS_PORT_SIZE = PA_32
-    // edge connector
-    CFG_PIN_P0, 0x2, // A0
+    CFG_PIN_P0, 0x2, // A0, edge connector start
     CFG_PIN_P1, 0x5, // A1
     CFG_PIN_P2, 0x16, // D1
     CFG_PIN_P3, 0x4, // A3
