@@ -76,13 +76,14 @@ const uint32_t config_data[] = {
     41, 0x18, // DISPLAY_CFG2 = 0x18
     43, 0x31, // PIN_DISPLAY_RST = D2
     44, 0x2E, // PIN_DISPLAY_BL = D5
-    47, 0x3e8, // PIN_BTN_LEFT = P_1000
-    48, 0x3eb, // PIN_BTN_RIGHT = P_1003
-    49, 0x3e9, // PIN_BTN_UP = P_1001
-    50, 0x3ea, // PIN_BTN_DOWN = P_1002
-    51, 0x3ec, // PIN_BTN_MENU = P_1004
+    // joystick btn define, ref button.cpp at common packages
+    47, 0x4d8, // PIN_BTN_LEFT = 1100 + 100 + A4 = 1240
+    48, 0x474, // PIN_BTN_RIGHT = 1100 + 0 + A4 = 1140
+    49, 0x475, // PIN_BTN_UP = 1100 + 0 + A5 = 1241
+    50, 0x4d9, // PIN_BTN_DOWN = 1100 + 100 + A5 = 1141
 
-    69, 0x3ed, // PIN_BTN_SOFT_RESET = P_1005
+    51, 0x12, // PIN_BTN_MENU = D10
+
     70, 0x68, // ACCELEROMETER_TYPE = MPU6050
     100, 0x2, // PIN_A0 = PA02
     101, 0x5, // PIN_A1 = PA05
