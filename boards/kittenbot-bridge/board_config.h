@@ -19,6 +19,8 @@
 #define BOARD_NEOPIXEL_PIN PIN_PB22
 #define BOARD_NEOPIXEL_COUNT 1
 
+#define BOARD_SCREEN 1
+
 #define BOOT_USART_MODULE                 SERCOM3
 #define BOOT_USART_MASK                   APBAMASK
 #define BOOT_USART_BUS_CLOCK_INDEX        MCLK_APBBMASK_SERCOM3
@@ -48,6 +50,9 @@ const uint32_t config_data[] = {
     1, 0x21, // PIN_ACCELEROMETER_INT = PB01
     //2, 0x23, // PIN_ACCELEROMETER_SCL = PB03
     //3, 0x22, // PIN_ACCELEROMETER_SDA = PB02
+    4, 0x11, // PIN_BTN_A = D12
+    5, 0x13, // PIN_BTN_B = D11
+    
     13, 0x10, // PIN_LED = PA16
     14, 0x20, // PIN_LIGHT = PB00
     18, 0xe, // PIN_MISO = PA14
@@ -59,6 +64,24 @@ const uint32_t config_data[] = {
     25, 0x22, // PIN_SDA = PB02
     27, 0x25, // PIN_TEMPERATURE = PB05
     28, 0x16, // PIN_TX = PA22
+    // arcade related
+    32, 0x2D, // PIN_DISPLAY_SCK = D4
+    34, 0x2F, // PIN_DISPLAY_MOSI = D6
+    35, 0x2C, // PIN_DISPLAY_CS = D7
+    36, 0x30, // PIN_DISPLAY_DC = D3
+    37, 0xa0, // DISPLAY_WIDTH = 160
+    38, 0x80, // DISPLAY_HEIGHT = 128
+    39, 0x80, // DISPLAY_CFG0 = 0x80
+    40, 0x12c2d, // DISPLAY_CFG1 = 0x12c2d
+    41, 0x18, // DISPLAY_CFG2 = 0x18
+    43, 0x31, // PIN_DISPLAY_RST = D2
+    44, 0x2E, // PIN_DISPLAY_BL = D5
+    47, 0x3e8, // PIN_BTN_LEFT = P_1000
+    48, 0x3eb, // PIN_BTN_RIGHT = P_1003
+    49, 0x3e9, // PIN_BTN_UP = P_1001
+    50, 0x3ea, // PIN_BTN_DOWN = P_1002
+    51, 0x3ec, // PIN_BTN_MENU = P_1004
+
     69, 0x3ed, // PIN_BTN_SOFT_RESET = P_1005
     70, 0x68, // ACCELEROMETER_TYPE = MPU6050
     100, 0x2, // PIN_A0 = PA02
