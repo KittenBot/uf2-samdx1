@@ -4,7 +4,7 @@
 #include "../../inc/configkeys.h"
 
 #define VENDOR_NAME "Kittenbot Teams"
-#define PRODUCT_NAME "Kittenbot Bridge"
+#define PRODUCT_NAME "Bridge"
 #define VOLUME_LABEL "Bridge"
 #define INDEX_URL "http://kittenbot.cn/bridge"
 #define BOARD_ID "SAMD51J19A-Bridge"
@@ -48,8 +48,8 @@ const uint32_t config_data[] = {
     513675505, 539130489, // magic
     62, 100,  // used entries, total entries
     1, 0x21, // PIN_ACCELEROMETER_INT = PB01
-    //2, 0x23, // PIN_ACCELEROMETER_SCL = PB03
-    //3, 0x22, // PIN_ACCELEROMETER_SDA = PB02
+    2, 0x23, // PIN_ACCELEROMETER_SCL = PB03
+    3, 0x22, // PIN_ACCELEROMETER_SDA = PB02
     4, 0x13, // PIN_BTN_A = D11
     5, 0x11, // PIN_BTN_B = D12
     
@@ -62,6 +62,7 @@ const uint32_t config_data[] = {
     23, 0xd, // PIN_SCK = PA13
     24, 0x23, // PIN_SCL = PB03
     25, 0x22, // PIN_SDA = PB02
+    26, 0x15, // amplifer ctrl D8 PA21
     27, 0x25, // PIN_TEMPERATURE = PB05
     28, 0x16, // PIN_TX = PA22
     // arcade related
@@ -83,7 +84,8 @@ const uint32_t config_data[] = {
     50, 0x4d9, // PIN_BTN_DOWN = 1100 + 100 + A5 = 1141
 
     51, 0x12, // PIN_BTN_MENU = D10
-
+    59, 255, // default speaker volumn
+    65, 0x02, // PIN_JACK_SND = A0 PA02
     70, 0x68, // ACCELEROMETER_TYPE = MPU6050
     100, 0x2, // PIN_A0 = PA02
     101, 0x5, // PIN_A1 = PA05
@@ -99,7 +101,7 @@ const uint32_t config_data[] = {
     155, 0x2E, // PIN_D5 = PB14
     156, 0x2F, // PIN_D6 = PB15
     156, 0x2C, // PIN_D7 = PB12
-    156, 0x02, // PIN_D8 = PA02
+    156, 0x15, // PIN_D8 = PA21
     159, 0x14, // PIN_D9 = PA20
     160, 0x12, // PIN_D10 = PA18
     161, 0x13, // PIN_D11 = PA19
@@ -119,7 +121,7 @@ const uint32_t config_data[] = {
     CFG_PIN_P5, 0x29, // A5
     CFG_PIN_P6, 0x2F, // D6
     CFG_PIN_P7, 0x2C, // D7
-    CFG_PIN_P8, 0x02, // D8
+    CFG_PIN_P8, 0x15, // D8
     CFG_PIN_P9, 0x14, // D9
     CFG_PIN_P10, 0x17, // D0
     CFG_PIN_P11, 0x13, // D11
